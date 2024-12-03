@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import divider from "../images/divider.png";
 import checkOutLoction from "../assets/checkoutloction.png";
-import "./CheckOutpage.css";
+import "./CheckOutPage.css";
 import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
 import Footeropy from "../Components/Footeropy";
