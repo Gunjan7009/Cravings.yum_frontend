@@ -15,7 +15,7 @@ import notification2 from "../assets/received.png";
 import notification3 from "../assets/dilever.png";
 import AppStoreImage from "../assets/applestore.png";
 import GooglePlayImage from "../assets/googleplay.png";
-import ChefImage from "../assets/Chef.png";
+import ChefImage from "../assets/chef.png";
 import DeliveryBoyImage from "../assets/deliveryboy.png";
 import PlaceOrder from "../assets/PlaceOrder.png";
 import TrackOrder from "../assets/TrackOrder.png";
