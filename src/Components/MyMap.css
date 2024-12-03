@@ -1,0 +1,76 @@
+.main-map{
+    position: relative;
+    height: 480px;
+    top: 50px;
+}
+
+.info-card-map{
+    position: absolute;
+    top: 40px;
+    left: 110px;
+    z-index: 1000;
+    background: #03081FF7;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0 0 0 0.3);
+    height:380px;
+    width:360px;
+}
+.headingone{
+    font-size:32px; 
+    font-weight:600;
+    padding-left:20px; 
+    margin-bottom:0px;
+    
+}
+.locate{
+    margin-bottom: 0px; 
+    margin-top: -10px;
+     padding-left: 20px;
+     color: #FC8A06;
+     font-weight: 600;
+}
+.locate_2{
+    margin-bottom: 0px; 
+    margin-top: -10px;
+     color: #FC8A06;
+     font-weight: 600;
+}
+.addres{
+    padding-left: 20px;
+}
+.detailing{
+    padding-left: 20px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 431px) {
+    .main-map{
+        height: 570px;
+        width: 100%;
+        margin-top: 60px;
+        padding: 0;
+    }
+    .info-card-map {
+        top: 230px; 
+        left: 10px; 
+        width: 90%;
+        height: 300px;
+    }
+
+    .headingone {
+        font-size: 20px; /* Further reduce font size */
+        padding-left: 5px; /* Adjust padding */
+    }
+
+    .locate, .locate_2 {
+        font-size: 14px; /* Reduce font size */
+        padding-left: 5px; /* Adjust padding */
+    }
+
+    .addres, .detailing {
+        font-size: 12px; /* Make text more compact */
+        padding-left: 5px; /* Adjust padding */
+    }
+}

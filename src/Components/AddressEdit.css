@@ -1,0 +1,141 @@
+/* AddressEdit.css */
+.address-form-wrapper {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 10px;
+  width: 70%;
+  height: 40%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+    right: 42%;
+    bottom: 90px;
+}
+
+.address-form-title {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.address-form-fields {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.address-form-select{
+  width: 96%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #000;
+}
+.address-form-input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  
+}
+.address-form-input::placeholder{
+  color: #ccc;
+}
+
+.address-form-select:focus,
+.address-form-input:focus {
+  outline: none;
+  border-color: #FC8A06;
+  box-shadow: 0 0 0 2px rgba(252, 138, 6, 0.2);
+}
+
+.address-form-textarea {
+ width: 97.5%;
+  min-height: 80px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  resize: vertical;
+  font-size: 14px;
+
+}
+
+.address-form-textarea::placeholder{
+  color: #ccc;
+}
+.address-form-textarea:focus {
+  outline: none;
+  border-color: #FC8A06;
+  box-shadow: 0 0 0 2px rgba(252, 138, 6, 0.2);
+}
+
+.address-form-button {
+  width: 20%;
+  padding: 12px;
+  background-color: #FC8A06;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+      position: relative;
+    left: 80%;
+}
+
+.address-form-button:hover {
+  background-color: #E87C03;
+}
+
+/* Responsive styling for devices with a max width of 431px */
+@media screen and (max-width: 431px) {
+  .address-form-wrapper {
+    width: 90%;
+    right: 0;
+    bottom: 0;
+    height: 60%; 
+  }
+
+  .address-form-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    font-weight: normal;
+  }
+
+  .address-form-fields {
+    display: block; 
+    gap: 10px;
+  }
+
+  .address-form-select{
+    width: 99%;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .address-form-input,
+  .address-form-textarea {
+    width: 93%;
+    font-size: 14px;
+      margin-bottom: 10px;
+  }
+
+  .address-form-button {
+    width: 100%; 
+    padding: 10px;
+    font-size: 14px;
+    left: 0;
+    margin-top: 10px;
+  }
+  .addresseditarea {
+        top: 0%;
+        left: 2%;
+        width: 100%;
+        height: auto;
+        max-height: 80%;
+        padding: 20px;
+    }
+}

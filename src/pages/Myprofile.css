@@ -1,0 +1,436 @@
+/* .main {
+  margin: 0px 40px 20px 40px;
+} */
+.profilesection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: opacity 0.3s ease-in-out;
+}
+.profilesection.dimmed {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.mainform {
+  width: 97%;
+  margin-left: 60px;
+}
+.myprofile {
+  font-size: 32px;
+  font-weight: 700;
+}
+.backbutton {
+  display: flex;
+  margin-left: 60px;
+  gap: 10px;
+}
+
+.form-group-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-input {
+  width: 460px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid gray;
+  padding-left: 20px;
+}
+.form input:disabled {
+  background-color: #ffffff !important;
+}
+
+.form-label-profile {
+  display: flex;
+  color: #000;
+  gap: 40px;
+}
+.global-dimmed {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.global-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0 0 0 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.global-modal-overlay .editbox {
+  position: relative;
+  z-index: 1001;
+}
+
+.editcardpopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+}
+
+.editcardarea {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0 0 0 0.1);
+  max-width: 90%;
+  max-height: 95%;
+  overflow: hidden;
+}
+.payment_header.dimmed {
+  opacity: 0.5;
+}
+.carddetails {
+  display: flex;
+  height: 74px;
+  width: 310px;
+  background-color: white;
+  border: 0.5px solid gray;
+  border-radius: 10px;
+  transition: opacity 0.3s;
+}
+
+.carddetails.dimmed {
+  opacity: 0.5;
+}
+
+.profile-form {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.arrowback {
+  height: 39px;
+  width: 39px;
+  margin-top: 35px;
+  cursor: pointer;
+}
+.topping {
+  display: flex;
+  justify-content: space-between;
+  width: 97%;
+  position: relative;
+  left: 50px;
+}
+.dp {
+  display: flex;
+  gap: 20px;
+  margin-left: -180px;
+}
+.dp img {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  left: 139px;
+  top: 1%;
+}
+.username {
+  position: relative;
+  left: 140px;
+  top: 15%;
+  font-size: 20px;
+  font-weight: 700;
+}
+.buttonediting {
+  position: relative;
+  height: 41px;
+  right: 223px;
+  top: 20px;
+}
+
+.dividera {
+  height: 2px;
+  margin: 0px 0px 0px 20px;
+  width: 85%;
+}
+.save-button {
+  height: 41px;
+  width: 87px;
+  background-color: #fc8a06;
+  color: white;
+  border-radius: 8px;
+  border: transparent;
+  cursor: pointer;
+}
+.edit-button {
+  height: 41px;
+  width: 87px;
+  background-color: #fc8a06;
+  color: white;
+  border-radius: 8px;
+  border: transparent;
+  cursor: pointer;
+}
+.mainformbody {
+  display: flex;
+  gap: 50px;
+  margin-top: 20px;
+}
+.paymentMethods {
+  padding-left: 40px;
+  padding-right: 30px;
+  margin-bottom: 100px;
+}
+.maincardbody {
+  display: flex;
+  gap: 20px;
+}
+.cardicon {
+  padding-left: 8px;
+}
+.plusarea {
+  display: flex;
+  border-radius: 50px;
+  background-color: #fc8a0640;
+  margin-top: 15px;
+  height: 45px;
+  width: 45px;
+  align-items: center;
+  justify-content: center;
+}
+.plusarea img {
+  height: 28px;
+}
+.cardnumber {
+  height: 72px;
+  width: 223px;
+}
+.cardno {
+  margin-left: 33px;
+  margin-top: 12px;
+}
+.twelvenumber {
+  margin: 0px;
+}
+.cardname {
+  margin: 0px;
+}
+.cardedit img {
+  cursor: pointer;
+  height: 24px;
+  margin-top: 23px;
+}
+.add-card-btn {
+  display: flex;
+  height: 74px;
+  width: 310px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 10px;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+.addcard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.pluscardarea {
+  display: flex;
+  border-radius: 50px;
+  background-color: #fc8a0642;
+  margin-right: 15px;
+  height: 45px;
+  width: 45px;
+  align-items: center;
+  justify-content: center;
+}
+.plus {
+  color: #fc8a06;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 431px) {
+  .mainform {
+    margin-left: 0px;
+    width: 100%;
+  }
+  .mainformbody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 0px;
+    margin-top: 70px;
+  }
+
+  .dp {
+    display: none; /* Hide the profile picture and username */
+  }
+
+  .buttonediting {
+    position: absolute;
+    top: 40px;
+    right: 41px;
+  }
+
+  .backbutton {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    margin: 0px;
+  }
+
+  .backbutton .myprofile {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 30px;
+  }
+
+  .arrowback {
+    background-color: #fc8a06;
+    color: #fff;
+    padding: 5px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    text-align: center;
+    margin-right: 15px;
+  }
+
+  .topping {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .form-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form-input {
+    width: 100%; /* Full width for smaller screens */
+    padding: 0px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .form input:disabled {
+    background-color: #ffffff !important;
+  }
+
+  .form-section {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .global-modal-overlay {
+    padding: 20px; /* Add padding for modal responsiveness */
+  }
+
+  .editcardarea {
+    max-width: 95%;
+    max-height: 90%;
+    padding: 20px;
+  }
+
+  .save-button,
+  .edit-button {
+    width: 100%; /* Full width for better accessibility */
+  }
+  .dividera {
+    width: 106%;
+    margin: 0px 0px 0px -9px;
+  }
+  .paymentMethods {
+    padding: 0px;
+  }
+  .payment_header {
+    font-size: 20px;
+  }
+
+  .maincardbody {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .carddetails {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+  }
+
+  .cardicon {
+    padding-left: 0;
+  }
+
+  .plusarea {
+    height: 43px;
+    width: 43px;
+    margin-top: 0;
+  }
+
+  .cardnumber {
+    width: 100%;
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  .cardno {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .cardedit img {
+    height: 20px;
+    margin-top: 10px;
+  }
+  .cardname {
+    color: #7e7b7b;
+  }
+  .add-card-btn {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+  }
+
+  .addcard {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .pluscardarea {
+    height: 35px;
+    width: 35px;
+  }
+
+  .editcardpopup {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .editcardarea {
+    width: 100%;
+    max-height: 90%;
+    overflow-y: auto;
+    background-color: transparent;
+  }
+}

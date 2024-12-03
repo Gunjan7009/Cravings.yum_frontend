@@ -1,0 +1,244 @@
+.deals-section {
+  width: 100%;
+}
+
+.deals-header {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.deals-header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+
+.foodlinksa {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.fooditems {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.95rem;
+  padding: 8px 16px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.fooditems.active {
+  border: 2px solid #FC8A06;
+
+}
+
+.fooditems:hover {
+  background-color:#FC8A06;
+  border-radius: 50px;
+}
+
+
+.deals-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  /* margin: 20px 0px; */
+}
+
+.dealcard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  width: 410px;
+  height: 260px;
+}
+
+.deal:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dealdiscount {
+  position: absolute;
+  width: 70px;
+  top: 0px;
+  right: 17px;
+  height: 52px;
+  background-color: #002244;
+  color: #fff;
+  font-size: 0.9rem;
+  /* padding: 11px; */
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.discountnumber {
+  padding-left: 18px;
+  font-size: 15px;
+}
+
+.dealcard-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.dealcard-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  color: white;
+  z-index: 2;
+}
+
+.dealcategorylabel {
+  font-size: 0.9rem;
+  color: #fc8a06;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.dealcardtitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+}
+.mobile-content{
+  display: none;
+}
+.dropdown-btn{
+  display: none;
+}
+@media screen and (max-width: 431px) {
+  .categories {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+  }
+.deal-heading {
+    font-size: 1.2rem;
+  }
+
+  .deal-heading .default-content {
+    display: none;
+  }
+
+  .deal-heading .mobile-content {
+    display: inline;
+  }
+  .deals-header{
+    gap: 0px;
+  }
+.deals-header h1 {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+  .foodlinksa {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 8px;
+    padding: 5px;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    gap: 10px;
+    z-index: 3;
+    background-color: #fff;
+    opacity: 90%;
+  }
+
+  .categories .dropdown-btn {
+    display: inline-block;
+    padding: 0px 6px 6px 6px;
+    font-size: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+
+  .categories .dropdown-btn:hover {
+    color: #000000;
+  }
+
+  .categories .dropdown-btn.open + .foodlinksa {
+    display: flex;
+  }
+
+  .fooditems.active {
+    padding: 10px 0;
+    text-align: left;
+    font-size: 1rem;
+    width: 100%;
+    border: none;
+  }
+
+  .fooditems:last-child {
+    border-bottom: none;
+  }
+  /* Adjust the styles for smaller screens */
+  .deals-cards {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling for better user experience */
+    -webkit-overflow-scrolling: touch; /* Enable momentum scrolling on iOS */
+    gap: 10px;
+    padding: 10px 10px 10px 0px;
+  }
+
+  .dealcard {
+    flex: 0 0 auto; /* Prevent shrinking or stretching */
+    width: 150px; /* Adjust card width for small screens */
+    height: 150px; /* Adjust card height for small screens */
+  }
+
+  .dealdiscount {
+    width: 50px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
+
+  .discountnumber {
+    padding-left: 14px;
+    font-size: 10px;
+  }
+
+  .dealcardtitle {
+    font-size: 0.7rem;
+  }
+
+  .dealcategorylabel {
+    font-size: 0.6rem;
+  }
+
+}

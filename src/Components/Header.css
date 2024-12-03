@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.promo-bar {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.promo-bar .promo-code {
+  font-weight: bold;
+  color: #fc8a06;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #1a1a1a; 
+}
+
+.location-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.location p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+  color: #1a1a1a;
+}
+
+.location p strong {
+  font-weight: bold; 
+}
+
+.change-location {
+  color: #fc8a06;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 10px; 
+  cursor: pointer;
+}
+
+.change-location:hover {
+  text-decoration: underline; 
+}
+
+
+.cart-section {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  width: 355px;
+  background-color: white;
+  border-bottom: 3px solid transparent;
+  gap: 1px;
+
+
+}
+
+.my-cart {
+  display: flex;
+  position: relative;
+  align-items: center;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 170px;
+  height: 68px;
+  top: 1px;
+  padding-left: 20px;
+  background-color: #28a745;
+  border-bottom-left-radius: 12px;
+}
+
+.cart-count{
+height: 20px;
+    width: 20px;
+    margin-left: 10px;
+    background-color: #fff;
+    color: #28a745;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.cart-icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.rupees {
+
+  position: relative;
+  flex-grow: 1;
+  height: 68px;
+  top: 1px;
+  background-color: #28a745;
+
+}
+
+.dropdown {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 68px;
+  top: 1px;
+  width: 60px;
+  background-color: #28a745;
+  border-bottom-right-radius: 12px;
+}
+
+.arrow-icon {
+  height: 30px;
+   cursor: pointer;
+  width: 30px;
+}
+
+@media screen and (max-width:431px) {
+  .main-header{
+    display: none;
+  }
+}
