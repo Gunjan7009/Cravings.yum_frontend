@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import wallet from "../assets/wallet.png";
 import maestrokard from "../assets/maestrokard.png";
-import payPal from "../assets/PayPal.png";
+import payPal from "../assets/payPal.png";
 import Stripe from "../assets/stripe.png";
 import AddIcon from "@mui/icons-material/Add";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
