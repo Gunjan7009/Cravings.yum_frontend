@@ -3,11 +3,13 @@ import api from "../data/api";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import signingimage from "../images/signing.png";
+import Loader from "../Components/Loader";
 import "./Userauth.css";
 import logo2 from "../images/LOGO-2.png";
 import Footeropy from "../Components/Footeropy";
 
 const Signup = () => {
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -19,6 +21,7 @@ const Signup = () => {
   const [signupError, setSignupError] = useState("");
 
   const onSubmit = async (data) => {
+    setLoading(true);
     try {
       const response = await api.post("/signup", {
         name: data.name,
@@ -46,12 +49,16 @@ const Signup = () => {
       );
       // Optionally handle error (e.g., show an error message)
     }
+    finally{
+      setLoading(false);
+    }
   };
   const handleSignin = () => {
     navigate("/signin");
   };
   return (
     <>
+    {loading && <Loader />}
     <div className="fullbody">
       <div className="mainpart">
         <div className="leftside">

@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import api from "../data/api";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import signingimage from "../images/signing.png";
 import logo2 from "../images/LOGO-2.png";
+import Loader from "../Components/Loader";
 import "./Userauth.css";
 import Footeropy from "../Components/Footeropy";
 import { setToken } from "../redux/authSLice";
 
 const Userauth = () => {
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const {
     register,
@@ -21,6 +23,7 @@ const Userauth = () => {
 
   const onSubmit = async (data) => {
     console.log("Submitting login data:", data);
+    setLoading(true);
     try {
       const response = await api.post("/signin", {
         email: data.email,
@@ -47,6 +50,9 @@ const Userauth = () => {
         "Login failed. Please check your credentials and try again."
       );
     }
+    finally{
+      setLoading(false);
+    }
   };
 
   const handleSignup = () => {
@@ -55,6 +61,7 @@ const Userauth = () => {
 
   return (
     <>
+    {loading && <Loader />}
     <div className="fullbody">
       <div className="mainpart">
         <div className="leftside">
