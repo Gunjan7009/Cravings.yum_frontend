@@ -7,6 +7,8 @@ import share from "../assets/shareicon.png";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import "./Basket.css";
 import { Link } from "react-router-dom";
+import scooter from "../images/scooter.png";
+import storeimg from "../images/store.png";
 const Basket = () => {
   const dispatch = useDispatch();
   const { items, subtotal, totalToPay, status } = useSelector(
@@ -119,8 +121,12 @@ const Basket = () => {
           </div>
         </div>
         <div className="basket-summary">
-          <button className="delivery-btn">Delivery Starts at 17:50</button>
-          <button className="collection-btn">Collection Starts at 15:50</button>
+
+            
+            <button className="delivery-btn"><img src={scooter} alt="" className="deliveryvehicle" />Delivery Starts at 17:50</button>
+         
+          
+            <button className="collection-btn"><img src={storeimg} alt="" className="storeimg" />Collection Starts at 15:50</button>
         </div>
 
         <button className="checkout-btn">
