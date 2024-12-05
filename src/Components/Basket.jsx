@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchCart, removeItemFromCart, clearCart } from "../redux/cartSlice";
 import cartImage from "../assets/cart.png";
 import deleteIcon from "../assets/deleteIcon.png"
+import CartShare from './CartShare'; // Import the CartShare component
+import SharedCart from './SharedCart';
 import share from "../assets/shareicon.png";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import "./Basket.css";
@@ -27,7 +29,7 @@ const Basket = () => {
 
   return (
     <>
-      <div className="sharebox">
+      {/* <div className="sharebox">
         <div className="sharing">
           <div className="shareicon">
             <img src={share} alt="Share Icon" />
@@ -39,13 +41,14 @@ const Basket = () => {
           </div>
         </div>
         <button className="copybtn">Copy link</button>
-      </div>
+      </div> */}
+      <CartShare />
       <div className="basket">
         <header className="basket-header">
           <img src={cartImage} className="cart-img" />
           <h1 className="cart-name">My Basket</h1>
         </header>
-        <div className="basket-items">
+        {/* <div className="basket-items">
           {items.length > 0 ? (
             items.map((item) => (
               <div className="basket-item" key={item.productId._id}>
@@ -75,7 +78,8 @@ const Basket = () => {
           ) : (
             <p>Your basket is empty.</p>
           )}
-        </div>
+        </div> */}
+        <SharedCart items={items} />
 
         <div className="basket-summary">
           <p>
