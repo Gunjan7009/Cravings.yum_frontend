@@ -1,17 +1,18 @@
 // SharedCart.js - Reusable cart items display component
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { removeItemFromCart } from "../redux/cartSlice";
+// import { useDispatch } from 'react-redux';
+// import { removeItemFromCart } from "../redux/cartSlice";
 import deleteIcon from "../assets/deleteIcon.png";
+import "./Basket.css";
 
-const SharedCart = ({ items }) => {
-    const dispatch = useDispatch();
+const SharedCart = ({ items, onRemoveItem }) => {
+    // const dispatch = useDispatch();
 
     return (
         <div className="basket-items">
             {items.length > 0 ? (
-                items.map((item) => (
-                    <div className="basket-item" key={item.productId._id}>
+                items.map((item, index) => (
+                    <div className="basket-item" key={item.productId._id || index}>
                         <div className="item-left">
                             <div className="item-quantity">
                                 <span>{item.quantity}x</span>
@@ -24,7 +25,11 @@ const SharedCart = ({ items }) => {
                         <div className="item-right">
                             <button
                                 className="remove-item"
-                                onClick={() => dispatch(removeItemFromCart(item.productId._id))}
+                                onClick={() => {
+                                    console.log("Removing item:", item.productId._id);
+                                    onRemoveItem(item.productId._id);
+                                }}
+
                             >
                                 <img
                                     src={deleteIcon}

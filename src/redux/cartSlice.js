@@ -14,15 +14,26 @@ export const addItemToCart = createAsyncThunk(
   }
 );
 
-export const fetchCart = createAsyncThunk("cart/fetchCart", async () => {
-  const response = await api.get("/getcart");
-  console.log("Fetched Cart Data:", response.data);
-  return response.data;
-});
+export const fetchCart = createAsyncThunk(
+  "cart/fetchCart",
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await api.get("/getcart");
+      return response.data;
+    } catch (error) {
+      if (error.response && error.response.status === 401) {
+        // Handle Unauthorized error (e.g., logout the user)
+        return rejectWithValue("Unauthorized"); // Handle the error in your component
+      }
+      return rejectWithValue(error.message);
+    }
+  }
+);
 
 export const removeItemFromCart = createAsyncThunk(
   "cart/removeItemFromCart",
   async (itemId, { dispatch }) => {
+    console.log("API call to remove item with ID:", itemId);
     await api.post("/removeitem", { productId: itemId });
     dispatch(fetchCart());
   }

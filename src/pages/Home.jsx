@@ -26,6 +26,7 @@ import twoImage from "../assets/two.png";
 import threeImage from "../assets/three.png";
 import loactionImage from "../assets/loaction.png";
 import api from "../data/api";
+import Loader from "../Components/Loader";
 import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 import SmallNav from "../Components/SmallNav";
 
@@ -43,12 +44,16 @@ const Home = () => {
         console.error("Error fetching brands:", error);
         setLoading(false);
       }
+      finally {
+        setLoading(false); // Stop loading
+      }
     };
     fetchBrands();
   }, []);
 
   return (
     <>
+      {loading && <Loader />}
       <div className="smallmaatha">
         <div className="smallhdr">
           <SmallNav />

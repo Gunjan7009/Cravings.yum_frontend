@@ -3,6 +3,7 @@ import api from "../data/api";
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "../redux/cartSlice";
 import "./FoodCard.css";
+import Loader from "./Loader";
 
 const FoodCard = ({ searchQuery }) => {
     const [groupedFoodItems, setGroupedFoodItems] = useState({});
@@ -26,6 +27,9 @@ const FoodCard = ({ searchQuery }) => {
                 console.error("Error fetching food items:", error);
                 setLoading(false);
             }
+            finally {
+                setLoading(false); // Stop loading
+            }
         };
 
         fetchData();
@@ -47,6 +51,7 @@ const FoodCard = ({ searchQuery }) => {
 
     return (
         <div>
+            {loading && <Loader />}
             {Object.keys(filteredGroupedFoodItems).length > 0 ? (
                 Object.keys(filteredGroupedFoodItems).map((category) => (
                     <div key={category}>

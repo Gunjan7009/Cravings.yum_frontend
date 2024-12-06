@@ -15,6 +15,7 @@ import OrderSucsseful from "./pages/OrderSucsseful";
 import PrivateRoute from "./Components/PrivateRoute";
 import Review from "./Components/Review";
 import SmallNav from "./Components/SmallNav";
+import SharedCartPage from "./Components/SharedCartPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -53,6 +54,7 @@ function App() {
         <Route path="/checkout" element={<CheckOutPage />} />
         <Route path="/payment" element={<PayPage />} />
         <Route path="/ordersuccessful" element={<OrderSucsseful />} />
+        <Route path="/shared-cart/:sharedLinkId" element={<SharedCartPage />} />
       </Routes>
     </>
   );
