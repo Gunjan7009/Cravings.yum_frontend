@@ -1,5 +1,5 @@
 // CartShare.js - New shared component for sharing cart
-import React from 'react';
+import React, { useState } from 'react';
 import share from "../assets/shareicon.png"; // Update path if necessary
 import api from "../data/api"; // Axios instance
 
